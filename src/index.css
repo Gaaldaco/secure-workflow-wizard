@@ -47,9 +47,9 @@ All colors MUST be HSL for proper theming.
     --terminal-text: 120 100% 85%;
     --terminal-accent: 48 100% 67%;
 
-    /* Achievement badges */
+    /* Achievement badges - improved contrast */
     --badge-gold: 43 96% 56%;
-    --badge-silver: 210 16% 75%;
+    --badge-silver: 210 16% 45%;
     --badge-bronze: 25 76% 55%;
 
     /* Gradients */
@@ -138,13 +138,19 @@ All colors MUST be HSL for proper theming.
   }
 
   .badge-silver {
-    background: hsl(var(--badge-silver) / 0.1);
+    background: hsl(var(--badge-silver) / 0.15);
     color: hsl(var(--badge-silver));
-    border: 1px solid hsl(var(--badge-silver) / 0.3);
+    border: 1px solid hsl(var(--badge-silver) / 0.4);
+  }
+
+  .badge-bronze {
+    background: hsl(var(--badge-bronze) / 0.15);
+    color: hsl(var(--badge-bronze));
+    border: 1px solid hsl(var(--badge-bronze) / 0.4);
   }
 
   .project-card {
-    background: var(--gradient-card);
+    background: hsl(var(--card));
     border: 1px solid hsl(var(--border));
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
