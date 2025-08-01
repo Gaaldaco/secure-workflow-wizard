@@ -29,7 +29,7 @@ const ProjectCard = ({ title, description, tags, category, featured = false }: P
   const Icon = categoryIcons[category];
   
   return (
-    <Card className={`project-card p-6 h-full transition-all duration-300 ${featured ? 'ring-2 ring-primary' : ''}`}>
+    <Card className="project-card p-6 h-full transition-all duration-300 hover:ring-2 hover:ring-primary">
       <div className="space-y-4 h-full flex flex-col">
         {/* Header with icon and category */}
         <div className="flex items-start justify-between">
@@ -49,7 +49,7 @@ const ProjectCard = ({ title, description, tags, category, featured = false }: P
             </div>
             <div>
               <h3 className="text-xl font-bold">{title}</h3>
-              <Badge className={`achievement-badge ${categoryColors[category]} text-xs`}>
+              <Badge className={`achievement-badge ${categoryColors[category]} text-xs`}> 
                 {category.charAt(0).toUpperCase() + category.slice(1)}
               </Badge>
             </div>
