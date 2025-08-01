@@ -23,10 +23,10 @@ const WhatsNext = () => {
       timeline: "Q1 2024"
     },
     {
-      title: "Terraform Cloud Lab (AWS + Azure)",
-      description: "Multi-cloud infrastructure with automated security scanning",
-      progress: 60,
-      icon: Cloud,
+      title: "MS365 & Third-Party User Automation",
+      description: "Automated user provisioning and deprovisioning across MS365 tenants and non-SSO third-party portals using PowerShell and custom APIs",
+      progress: 85,
+      icon: Zap,
       status: "Active",
       timeline: "Ongoing"
     },
