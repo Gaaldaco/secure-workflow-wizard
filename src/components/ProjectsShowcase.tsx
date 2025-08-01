@@ -41,10 +41,16 @@ const ProjectsShowcase = () => {
       category: "infrastructure" as const
     },
     {
-      title: "Terraform Cloud Lab Environment",
-      description: "Building a multi-cloud lab environment with Terraform for AWS and Azure, including automated security scanning and compliance checks.",
-      tags: ["Terraform", "AWS", "Azure", "IaC", "Security"],
+      title: "Microsoft 365 & Azure Cloud Deployments",
+      description: "Built secure, scalable cloud environments across Microsoft 365 and Azure. Led tenant migrations for Exchange Online, SharePoint, and Teams. Automated provisioning, license assignment, and group sync with PowerShell. Deployed Azure virtual machines, storage, NSGs, and alerts using scripted ARM templates and best-practice security baselines.",
+      tags: ["M365", "Azure", "PowerShell", "Cloud", "Security", "Automation"],
       category: "cloud" as const
+    },
+    {
+      title: "Vulnerability Scanning & Cyber Remediation",
+      description: "Set up and managed scheduled Nessus scans for multiple clients. Automated report parsing and ticket creation. Executed remediations for high/critical vulnerabilities—addressed insecure services, patched zero-days, and implemented hardening baselines for endpoints and servers.",
+      tags: ["Security", "Nessus", "Hardening", "VulnerabilityManagement"],
+      category: "security" as const
     }
   ];
 
