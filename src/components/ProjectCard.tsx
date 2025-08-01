@@ -22,7 +22,7 @@ const categoryColors = {
   security: "badge-gold",
   cloud: "badge-silver", 
   automation: "badge-bronze",
-  infrastructure: "border-muted-foreground text-muted-foreground"
+  infrastructure: "badge-silver"
 };
 
 const ProjectCard = ({ title, description, tags, category, featured = false }: ProjectCardProps) => {
