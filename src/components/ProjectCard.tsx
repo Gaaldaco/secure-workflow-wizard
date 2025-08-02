@@ -1,31 +1,28 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Code, Shield, Cloud, Server, Database } from "lucide-react";
+import { ExternalLink, Code, Shield, Cloud, Server, Database, Download, Briefcase } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   tags: string[];
-  category: "security" | "cloud" | "automation" | "infrastructure";
+  category: "professional" | "selfhosted";
   featured?: boolean;
+  selfHostable?: boolean;
 }
 
 const categoryIcons = {
-  security: Shield,
-  cloud: Cloud,
-  automation: Code,
-  infrastructure: Server
+  professional: Briefcase,
+  selfhosted: Download
 };
 
 const categoryColors = {
-  security: "badge-gold",
-  cloud: "badge-silver", 
-  automation: "badge-bronze",
-  infrastructure: "badge-silver"
+  professional: "badge-gold",
+  selfhosted: "badge-silver"
 };
 
-const ProjectCard = ({ title, description, tags, category, featured = false }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, tags, category, featured = false, selfHostable = false }: ProjectCardProps) => {
   const Icon = categoryIcons[category];
   
   return (
@@ -35,31 +32,37 @@ const ProjectCard = ({ title, description, tags, category, featured = false }: P
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
             <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-              category === 'security' ? 'bg-badge-gold/10' :
-              category === 'cloud' ? 'bg-primary/10' :
-              category === 'automation' ? 'bg-accent/10' :
+              category === 'professional' ? 'bg-badge-gold/10' :
+              category === 'selfhosted' ? 'bg-primary/10' :
               'bg-muted'
             }`}>
               <Icon className={`w-5 h-5 ${
-                category === 'security' ? 'text-badge-gold' :
-                category === 'cloud' ? 'text-primary' :
-                category === 'automation' ? 'text-accent' :
+                category === 'professional' ? 'text-badge-gold' :
+                category === 'selfhosted' ? 'text-primary' :
                 'text-muted-foreground'
               }`} />
             </div>
             <div>
               <h3 className="text-xl font-bold">{title}</h3>
               <Badge className={`achievement-badge ${categoryColors[category]} text-xs`}> 
-                {category.charAt(0).toUpperCase() + category.slice(1)}
+                {category === 'professional' ? 'MSP Experience' : 'Self-Hosted'}
               </Badge>
             </div>
           </div>
-          {featured && (
-            <Badge className="achievement-badge badge-gold">
-              <Database className="w-3 h-3" />
-              Featured
-            </Badge>
-          )}
+          <div className="flex flex-col gap-2">
+            {featured && (
+              <Badge className="achievement-badge badge-gold">
+                <Database className="w-3 h-3" />
+                Featured
+              </Badge>
+            )}
+            {selfHostable && (
+              <Badge className="achievement-badge badge-bronze">
+                <Download className="w-3 h-3" />
+                Self-Host
+              </Badge>
+            )}
+          </div>
         </div>
 
         {/* Description */}
@@ -81,8 +84,12 @@ const ProjectCard = ({ title, description, tags, category, featured = false }: P
           variant="outline" 
           className="w-full mt-auto glow-on-hover group"
         >
-          View Details
-          <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+          {category === 'selfhosted' ? 'Try It Yourself' : 'View Details'}
+          {category === 'selfhosted' ? (
+            <Download className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform" />
+          ) : (
+            <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+          )}
         </Button>
       </div>
     </Card>

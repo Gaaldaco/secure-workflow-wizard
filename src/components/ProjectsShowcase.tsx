@@ -7,127 +7,147 @@ import { Filter, Grid3X3, Shield, Cloud, Code, Server } from "lucide-react";
 const ProjectsShowcase = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
-  const projects = [
+const professionalProjects = [
     {
-      title: "Multi-Tenant Automation with n8n",
-      description: "Built secure, scoped automations that sync users, contacts, and KBs across platforms for multiple companies. Implemented role-based access controls and audit logging.",
-      tags: ["n8n", "Multi-tenant", "API", "Automation", "Security"],
-      category: "automation" as const,
+      title: "Automated User Provisioning",
+      description: "Created scalable PowerShell + ImmyBot workflows for M365 onboarding, including license assignment, AD setup, profile configs, and Intune policies. Streamlined client onboarding process across multiple tenants.",
+      tags: ["PowerShell", "ImmyBot", "M365", "Intune", "Automation"],
+      type: "professional" as const,
       featured: true
     },
     {
-      title: "Zero-Trust Remote Access System",
-      description: "Combined Pi-hole, pfSense, SonicWall, and WireGuard to create hardened remote environments with conditional access and continuous monitoring.",
-      tags: ["Zero-Trust", "pfSense", "WireGuard", "Network", "Security"],
-      category: "security" as const,
+      title: "ConnectWise + Hudu Sync Tool",
+      description: "Used n8n to keep documentation, company info, and contact records synchronized across multiple systems. Eliminated manual data entry and ensured consistency across platforms.",
+      tags: ["n8n", "ConnectWise", "Hudu", "API", "Integration"],
+      type: "professional" as const,
       featured: true
     },
     {
-      title: "Infrastructure Chatbot + Vector Search",
-      description: "Created internal chatbot using Gemini and MySQL to surface company docs by context—not keywords. Integrated with Slack for real-time support.",
-      tags: ["AI", "Vector-Search", "MySQL", "Gemini", "Documentation"],
-      category: "automation" as const
+      title: "Hybrid Cloud Infrastructure Deployment",
+      description: "Built secure, scalable environments across Microsoft 365 and Azure for multiple clients. Led tenant migrations, automated provisioning, and implemented security baselines using ARM templates.",
+      tags: ["M365", "Azure", "PowerShell", "Cloud", "Security"],
+      type: "professional" as const
     },
     {
-      title: "Secure Imaging & Deployment Pipeline",
-      description: "Migrated MDT to SCCM, integrated self-healing deployment with ImmyBot and security tagging. Reduced deployment time by 60%.",
-      tags: ["SCCM", "ImmyBot", "Imaging", "PowerShell", "Automation"],
-      category: "infrastructure" as const
+      title: "Vulnerability Management Pipeline",
+      description: "Set up and managed scheduled Nessus scans for client environments. Automated report parsing, ticket creation, and remediation tracking. Implemented hardening baselines for endpoints and servers.",
+      tags: ["Nessus", "Security", "Hardening", "Compliance"],
+      type: "professional" as const
     },
     {
-      title: "Self-Hosted Alerting (ntfy + Docker)",
-      description: "Used ntfy, Discord, and firewall integration for real-time security/event alerts and temporary block/unblock workflows with auto-remediation.",
-      tags: ["Docker", "ntfy", "Discord", "Monitoring", "DevOps"],
-      category: "infrastructure" as const
-    },
-    {
-      title: "Microsoft 365 & Azure Cloud Deployments",
-      description: "Built secure, scalable cloud environments across Microsoft 365 and Azure. Led tenant migrations for Exchange Online, SharePoint, and Teams. Automated provisioning, license assignment, and group sync with PowerShell. Deployed Azure virtual machines, storage, NSGs, and alerts using scripted ARM templates and best-practice security baselines.",
-      tags: ["M365", "Azure", "PowerShell", "Cloud", "Security", "Automation"],
-      category: "cloud" as const
-    },
-    {
-      title: "Vulnerability Scanning & Cyber Remediation",
-      description: "Set up and managed scheduled Nessus scans for multiple clients. Automated report parsing and ticket creation. Executed remediations for high/critical vulnerabilities—addressed insecure services, patched zero-days, and implemented hardening baselines for endpoints and servers.",
-      tags: ["Security", "Nessus", "Hardening", "VulnerabilityManagement"],
-      category: "security" as const
+      title: "Network Security Implementation",
+      description: "Deployed and configured pfSense, SonicWall, and Fortinet firewalls for clients. Implemented SSL VPN, WireGuard tunnels, and network segmentation for secure remote access.",
+      tags: ["pfSense", "SonicWall", "VPN", "Network", "Security"],
+      type: "professional" as const
     }
   ];
 
-  const filterOptions = [
-    { id: "all", label: "All Projects", icon: Grid3X3 },
-    { id: "security", label: "Security", icon: Shield },
-    { id: "cloud", label: "Cloud", icon: Cloud },
-    { id: "automation", label: "Automation", icon: Code },
-    { id: "infrastructure", label: "Infrastructure", icon: Server }
+  const selfHostedProjects = [
+    {
+      title: "Cybersecurity Dashboard",
+      description: "Aggregates logs and service status from local systems (pfSense, Proxmox, Uptime Kuma) into a visual dashboard. Self-hostable via Docker Compose. Shows core log aggregation and alert routing concepts.",
+      tags: ["Docker", "Node-RED", "pfSense", "Monitoring", "Dashboard"],
+      type: "selfhosted" as const,
+      featured: true,
+      selfHostable: true
+    },
+    {
+      title: "Self-Service Onboarding Form",
+      description: "A mock onboarding portal built in Node.js and SQLite. Simulates intake of client info and generates internal JSON/webhook payloads for use in n8n automations. Great for testing automation flows.",
+      tags: ["Node.js", "SQLite", "Automation", "Webhooks", "n8n"],
+      type: "selfhosted" as const,
+      selfHostable: true
+    },
+    {
+      title: "Basic Threat Simulation Lab",
+      description: "Docker-based project for testing endpoint detection and log alerting using simple simulated threats (failed SSH, service crashes). Great for cybersecurity students to practice alerting and response flows.",
+      tags: ["Docker", "Security", "Lab", "Testing", "Education"],
+      type: "selfhosted" as const,
+      selfHostable: true
+    },
+    {
+      title: "Network Monitoring & Alerting",
+      description: "Self-hosted solution using ntfy, Discord, and firewall integration for real-time security alerts. Includes automated IP blocking and notification workflows. Fully containerized for easy deployment.",
+      tags: ["Docker", "ntfy", "Discord", "Monitoring", "Security"],
+      type: "selfhosted" as const,
+      selfHostable: true
+    }
   ];
-
-  const filteredProjects = activeFilter === "all" 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
 
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Security & Infrastructure Projects</h2>
+          <h2 className="text-4xl font-bold mb-4">Projects & Experience</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Production-ready projects that showcase security-conscious automation, 
-            scalable infrastructure, and real-world problem solving
+            Real-world MSP experience and self-hosted projects that showcase security-conscious automation, 
+            scalable infrastructure, and practical problem solving
           </p>
         </div>
 
-        {/* Filter buttons */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {filterOptions.map((option) => {
-            const Icon = option.icon;
-            return (
-              <Button
-                key={option.id}
-                variant={activeFilter === option.id ? "default" : "outline"}
-                onClick={() => setActiveFilter(option.id)}
-                className="glow-on-hover"
+        {/* Professional Experience Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">Professional MSP Experience</h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Real-world projects and infrastructure work completed for clients in a managed service provider environment
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {professionalProjects.map((project, index) => (
+              <div 
+                key={project.title}
+                className="animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <Icon className="w-4 h-4 mr-2" />
-                {option.label}
-              </Button>
-            );
-          })}
+                <ProjectCard {...project} category="professional" />
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Projects grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {filteredProjects.map((project, index) => (
-            <div 
-              key={project.title}
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <ProjectCard {...project} />
-            </div>
-          ))}
+        {/* Self-Hosted Projects Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">Self-Hosted Projects</h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Open-source tools and automation workflows you can deploy yourself. Great for learning and testing concepts.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {selfHostedProjects.map((project, index) => (
+              <div 
+                key={project.title}
+                className="animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <ProjectCard {...project} category="selfhosted" />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Bottom section */}
-        <div className="text-center mt-16">
+        <div className="text-center">
           <div className="max-w-2xl mx-auto space-y-4">
             <p className="text-muted-foreground">
-              All projects focus on production readiness, security best practices, and scalability.
-              No home lab toys—just real solutions that solve real problems.
+              Professional projects demonstrate real-world MSP experience. Self-hosted projects are available for deployment and learning.
             </p>
             <div className="flex flex-wrap justify-center gap-2">
               <Badge className="achievement-badge badge-gold">
                 <Shield className="w-3 h-3" />
-                Security-First
+                MSP Experience
               </Badge>
               <Badge className="achievement-badge badge-silver">
                 <Server className="w-3 h-3" />
-                Production-Ready
+                Self-Hostable
               </Badge>
               <Badge className="achievement-badge badge-bronze">
                 <Code className="w-3 h-3" />
-                Scalable
+                Open Source
               </Badge>
             </div>
           </div>
