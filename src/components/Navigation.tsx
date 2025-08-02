@@ -41,7 +41,7 @@ const Navigation = () => {
             <div>
               <div className="font-bold text-lg">Gene</div>
               <Badge className="achievement-badge badge-silver text-xs">
-                Cloud Engineer
+                Level III Technician
               </Badge>
             </div>
           </div>
