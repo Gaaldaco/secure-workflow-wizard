@@ -5,7 +5,7 @@ import { Terminal, Shield, Cloud, ArrowRight, Download } from "lucide-react";
 
 const HeroSection = () => {
   const [typedText, setTypedText] = useState("");
-  const fullText = "Building Smarter IT, One Workflow at a Time";
+  const fullText = "Building Secure IT Infrastructure & Automation";
 
   useEffect(() => {
     let index = 0;
@@ -35,22 +35,22 @@ const HeroSection = () => {
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             <Badge className="achievement-badge badge-gold">
               <Shield className="w-3 h-3" />
-              Security-Aware
+              Security-Focused
             </Badge>
             <Badge className="achievement-badge badge-silver">
               <Terminal className="w-3 h-3" />
-              Automation-Obsessed
+              Automation-Builder
             </Badge>
             <Badge className="achievement-badge badge-gold">
               <Cloud className="w-3 h-3" />
-              Cloud-Savvy
+              Infrastructure-Driven
             </Badge>
           </div>
 
           {/* Main heading */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent animate-fade-in">
-              Hi, I'm Gene
+              Hey, I'm [Your Name]
             </h1>
             
             {/* Typewriter effect */}
@@ -64,17 +64,17 @@ const HeroSection = () => {
           {/* Tagline */}
           <div className="space-y-2 animate-fade-in delay-500">
             <p className="text-xl md:text-2xl font-semibold text-primary">
-              Security-aware. Automation-obsessed. Cloud-savvy.
+              MSP Technician. Security Student. Automation Builder.
             </p>
           </div>
 
           {/* Description */}
           <div className="max-w-3xl mx-auto animate-fade-in delay-700">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              After years building automation, documentation systems, and infrastructure at an MSP, 
-              I'm now shifting focus to <span className="text-primary font-medium">cloud engineering</span> and 
-              <span className="text-primary font-medium"> security analysis</span> roles that value 
-              production-grade thinking and self-healing systems.
+              Currently working at an MSP where I build and manage infrastructure, automate workflows, 
+              and secure client environments. Studying <span className="text-primary font-medium">cybersecurity</span> 
+              in college and recently completed a bootcamp. I focus on practical solutions that work in 
+              <span className="text-primary font-medium">real production environments</span>.
             </p>
           </div>
 
@@ -108,12 +108,12 @@ const HeroSection = () => {
                   <span className="text-terminal-accent">$</span>
                   <span className="ml-2">whoami</span>
                 </div>
-                <div className="text-terminal-text">MSP → Cloud Engineer | Security Analyst</div>
+                <div className="text-terminal-text">MSP Technician | Cybersecurity Student</div>
                 <div className="flex items-center">
                   <span className="text-terminal-accent">$</span>
                   <span className="ml-2">cat specialties.txt</span>
                 </div>
-                <div className="text-terminal-text">n8n, Docker, SCCM, pfSense, Zero-Trust, Terraform</div>
+                <div className="text-terminal-text">PowerShell, n8n, Proxmox, pfSense, M365, Hyper-V</div>
                 <div className="flex items-center">
                   <span className="text-terminal-accent">$</span>
                   <span className="ml-2 animate-pulse">_</span>

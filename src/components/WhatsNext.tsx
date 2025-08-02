@@ -15,36 +15,36 @@ import {
 const WhatsNext = () => {
   const learningGoals = [
     {
-      title: "CompTIA Security+ → CYSA+",
-      description: "Building foundation in security analysis and threat detection",
-      progress: 75,
+      title: "CompTIA Security+ Certification",
+      description: "Building foundation in cybersecurity principles, risk management, and threat analysis based on bootcamp knowledge and MSP experience",
+      progress: 60,
       icon: Award,
       status: "In Progress",
-      timeline: "Q1 2024"
+      timeline: "2024"
     },
     {
-      title: "MS365 & Third-Party User Automation",
-      description: "Automated user provisioning and deprovisioning across MS365 tenants and non-SSO third-party portals using PowerShell and custom APIs",
-      progress: 85,
+      title: "Homelab Security Testing",
+      description: "Expanding my Proxmox homelab to test security tools, practice incident response, and simulate enterprise environments",
+      progress: 70,
       icon: Zap,
       status: "Active",
       timeline: "Ongoing"
     },
     {
-      title: "SOC Documentation Assistant",
-      description: "Expanding chatbot platform for security operations",
-      progress: 40,
+      title: "Advanced PowerShell Automation",
+      description: "Building more sophisticated security automation scripts for vulnerability scanning, compliance checking, and alert management",
+      progress: 80,
       icon: Bot,
-      status: "Building",
-      timeline: "Q2 2024"
+      status: "Active",
+      timeline: "Ongoing"
     },
     {
-      title: "Open-Source n8n Security Modules",
-      description: "Contributing security-focused automation modules",
-      progress: 25,
+      title: "SIEM and SOC Skills",
+      description: "Learning advanced SIEM tools and SOC processes to prepare for security analyst roles",
+      progress: 30,
       icon: GitFork,
       status: "Planning",
-      timeline: "Q2 2024"
+      timeline: "2024"
     }
   ];
 
@@ -64,9 +64,9 @@ const WhatsNext = () => {
             <Target className="w-4 h-4" />
             Continuous Learning
           </Badge>
-          <h2 className="text-4xl font-bold mb-4">What's Next</h2>
+          <h2 className="text-4xl font-bold mb-4">What I'm Building Towards</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Here's what I'm building, learning, and getting certified in next...
+            Current studies, projects, and the cybersecurity path ahead...
           </p>
         </div>
 

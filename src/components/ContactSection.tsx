@@ -24,10 +24,10 @@ const ContactSection = () => {
             <Handshake className="w-4 h-4" />
             Let's Connect
           </Badge>
-          <h2 className="text-4xl font-bold mb-4">Looking for someone who's done the hard stuff?</h2>
+          <h2 className="text-4xl font-bold mb-4">Ready to Connect?</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to scale production-grade automation and security practices? 
-            Let's talk about how my MSP experience translates to your cloud and security needs.
+            Whether you're looking for cybersecurity talent, need help with IT infrastructure, 
+            or want to discuss automation projects, I'd love to hear from you.
           </p>
         </div>
 
@@ -79,19 +79,19 @@ const ContactSection = () => {
                   <div className="space-y-2 text-sm">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-accent"></div>
-                      <span>5+ years in MSP automation & infrastructure</span>
+                      <span>Real MSP experience with client infrastructure</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-accent"></div>
-                      <span>Security-first mindset in all implementations</span>
+                      <span>Cybersecurity bootcamp graduate & college student</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-accent"></div>
-                      <span>Production experience with multi-tenant systems</span>
+                      <span>Hands-on automation and scripting experience</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-accent"></div>
-                      <span>Currently pursuing Security+ certification</span>
+                      <span>Security-focused learning and homelab testing</span>
                     </div>
                   </div>
                 </div>
@@ -173,7 +173,7 @@ const ContactSection = () => {
         <div className="text-center mt-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-terminal-bg rounded-lg">
             <span className="text-terminal-accent font-mono text-sm">$</span>
-            <span className="text-terminal-text font-mono text-sm">hire_gene --role="cloud-engineer" --experience="msp-to-enterprise"</span>
+            <span className="text-terminal-text font-mono text-sm">contact_me --interest="cybersecurity" --experience="msp-infrastructure"</span>
             <span className="text-terminal-accent font-mono text-sm animate-pulse">_</span>
           </div>
         </div>

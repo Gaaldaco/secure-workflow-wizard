@@ -38,14 +38,14 @@ const Index = () => {
               <div className="w-6 h-6 rounded bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-mono text-xs">G</span>
               </div>
-              <span className="font-medium">Gene's Portfolio</span>
+              <span className="font-medium">[Your Name]'s Portfolio</span>
             </div>
             <p className="text-muted-foreground text-sm max-w-md mx-auto">
-              MSP → Cloud Engineer | Security Analyst. 
-              Building secure, scalable automation that actually works in production.
+              MSP Technician | Cybersecurity Student. 
+              Building secure infrastructure and automation with real-world experience.
             </p>
             <div className="text-xs text-muted-foreground">
-              © 2024 Gene. Built with React, TypeScript, and way too much coffee.
+              © 2024 [Your Name]. Built with React, TypeScript, and real MSP experience.
             </div>
           </div>
         </div>
