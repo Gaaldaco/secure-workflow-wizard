@@ -48,19 +48,31 @@ const ContactSection = () => {
 
                 {/* Quick action buttons */}
                 <div className="grid gap-4">
-                  <a href="/Gene%20Resume.pdf" download target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="glow-on-hover group justify-start" asChild>
-                      <span className="flex items-center">
-                        <Download className="w-5 h-5 mr-3" />
-                        <div className="text-left">
-                          <div className="font-medium">Download Resume</div>
-                          <div className="text-sm text-primary-foreground/80">Full technical background & experience</div>
-                        </div>
-                      </span>
-                    </Button>
-                  </a>
+                  <div className="w-full">
+                    <a
+                      href="/Gene%20Resume.pdf"
+                      download
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full block"
+                    >
+                      <Button
+                        size="lg"
+                        className="w-full glow-on-hover group justify-start"
+                        asChild
+                      >
+                        <span className="flex items-center">
+                          <Download className="w-5 h-5 mr-3" />
+                          <div className="text-left">
+                            <div className="font-medium">Download Resume</div>
+                            <div className="text-sm text-primary-foreground/80">Full technical background & experience</div>
+                          </div>
+                        </span>
+                      </Button>
+                    </a>
+                  </div>
 
-                  <Button variant="outline" size="lg" className="glow-on-hover group justify-start">
+                  <Button variant="outline" size="lg" className="w-full glow-on-hover group justify-start">
                     <Github className="w-5 h-5 mr-3" />
                     <div className="text-left">
                       <div className="font-medium">View GitHub</div>
@@ -68,7 +80,7 @@ const ContactSection = () => {
                     </div>
                   </Button>
 
-                  <Button variant="outline" size="lg" className="glow-on-hover group justify-start">
+                  <Button variant="outline" size="lg" className="w-full glow-on-hover group justify-start">
                     <Linkedin className="w-5 h-5 mr-3" />
                     <div className="text-left">
                       <div className="font-medium">LinkedIn Profile</div>
