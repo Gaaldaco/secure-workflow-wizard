@@ -80,7 +80,11 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 animate-fade-in delay-1000">
-            <Button size="lg" className="glow-on-hover group">
+            <Button
+              size="lg"
+              className="glow-on-hover group"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               See My Projects
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
