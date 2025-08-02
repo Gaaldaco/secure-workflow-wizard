@@ -50,7 +50,7 @@ const HeroSection = () => {
           {/* Main heading */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent animate-fade-in">
-              Hey, I'm [Your Name]
+              Welcome!
             </h1>
             
             {/* Typewriter effect */}
