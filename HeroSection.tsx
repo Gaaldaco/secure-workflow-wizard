@@ -1,0 +1,1 @@
+<button onClick={() => window.location.href='/Gene%20Resume.pdf'}>Download Resume</button>
