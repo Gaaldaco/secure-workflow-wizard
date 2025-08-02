@@ -88,9 +88,16 @@ const HeroSection = () => {
               See My Projects
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg" className="glow-on-hover">
-              <Download className="w-4 h-4 mr-2" />
-              Download Resume
+            <Button asChild variant="outline" size="lg" className="glow-on-hover">
+              <a
+                href="/Gene%20Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download Resume
+              </a>
             </Button>
           </div>
 
