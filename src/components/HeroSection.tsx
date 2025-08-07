@@ -32,7 +32,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Achievement badges */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 mb-6 md:mb-8 px-4">
             <Badge className="achievement-badge badge-gold">
               <Shield className="w-3 h-3" />
               Security-Focused
@@ -48,13 +48,13 @@ const HeroSection = () => {
           </div>
 
           {/* Main heading */}
-          <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent animate-fade-in">
+          <div className="space-y-4 px-4">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent animate-fade-in">
               Welcome!
             </h1>
             
             {/* Typewriter effect */}
-            <div className="text-2xl md:text-3xl text-muted-foreground font-medium h-12 flex items-center justify-center">
+            <div className="text-lg sm:text-xl md:text-3xl text-muted-foreground font-medium h-10 md:h-12 flex items-center justify-center px-2">
               <span className="border-r-2 border-primary animate-pulse">
                 {typedText}
               </span>
@@ -69,8 +69,8 @@ const HeroSection = () => {
           </div>
 
           {/* Description */}
-          <div className="max-w-3xl mx-auto animate-fade-in delay-700">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl mx-auto animate-fade-in delay-700 px-4">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               Currently working at an MSP where I build and manage infrastructure, automate workflows, 
               and secure client environments. Studying <span className="text-primary font-medium">cybersecurity </span> 
               in college and recently completed a bootcamp. I focus on practical solutions that work in 
@@ -102,8 +102,8 @@ const HeroSection = () => {
           </div>
 
           {/* Terminal window */}
-          <div className="mt-16 max-w-2xl mx-auto animate-fade-in delay-1200">
-            <div className="terminal-glow rounded-lg p-6 text-left">
+          <div className="mt-12 md:mt-16 max-w-2xl mx-auto animate-fade-in delay-1200 px-4">
+            <div className="terminal-glow rounded-lg p-4 md:p-6 text-left overflow-x-auto">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-3 h-3 rounded-full bg-destructive"></div>
                 <div className="w-3 h-3 rounded-full bg-badge-gold"></div>

@@ -22,16 +22,16 @@ const CareerTimeline = () => {
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">My Journey</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-12 md:mb-16 px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Journey</h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             From MSP infrastructure work to cybersecurity focus
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
           {/* What I Did - Left Side */}
-          <Card className="project-card p-8 relative">
+          <Card className="project-card p-6 md:p-8 relative">
             <div className="absolute -top-4 left-8">
               <Badge className="achievement-badge badge-silver">
                 <Wrench className="w-4 h-4" />
@@ -45,8 +45,8 @@ const CareerTimeline = () => {
                   <Wrench className="w-6 h-6 text-secondary-foreground" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">What I Do at the MSP</h3>
-                  <p className="text-muted-foreground">Real-world infrastructure, security, and automation</p>
+                  <h3 className="text-xl md:text-2xl font-bold">What I Do at the MSP</h3>
+                  <p className="text-sm md:text-base text-muted-foreground">Real-world infrastructure, security, and automation</p>
                 </div>
               </div>
 
@@ -83,7 +83,7 @@ const CareerTimeline = () => {
           </div>
 
           {/* Where I'm Going - Right Side */}
-          <Card className="project-card p-8 relative">
+          <Card className="project-card p-6 md:p-8 relative">
             <div className="absolute -top-4 left-8">
               <Badge className="achievement-badge badge-gold">
                 <Target className="w-4 h-4" />
@@ -97,8 +97,8 @@ const CareerTimeline = () => {
                   <Shield className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">My Cybersecurity Focus</h3>
-                  <p className="text-muted-foreground">Current studies and career direction</p>
+                  <h3 className="text-xl md:text-2xl font-bold">My Cybersecurity Focus</h3>
+                  <p className="text-sm md:text-base text-muted-foreground">Current studies and career direction</p>
                 </div>
               </div>
 

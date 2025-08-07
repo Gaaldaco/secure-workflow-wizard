@@ -78,24 +78,24 @@ const professionalProjects = [
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Projects & Experience</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects & Experience</h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Real-world MSP experience and self-hosted projects that showcase security-conscious automation, 
             scalable infrastructure, and practical problem solving
           </p>
         </div>
 
         {/* Professional Experience Section */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Professional MSP Experience</h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="mb-16 md:mb-20">
+          <div className="text-center mb-8 md:mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Professional MSP Experience</h3>
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               Real-world projects and infrastructure work completed for clients in a managed service provider environment
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto">
             {professionalProjects.map((project, index) => (
               <div 
                 key={project.title}
@@ -109,15 +109,15 @@ const professionalProjects = [
         </div>
 
         {/* Self-Hosted Projects Section */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Self-Hosted Projects</h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="mb-16 md:mb-20">
+          <div className="text-center mb-8 md:mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Self-Hosted Projects</h3>
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               Open-source tools and automation workflows you can deploy yourself. Great for learning and testing concepts.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto">
             {selfHostedProjects.map((project, index) => (
               <div 
                 key={project.title}
