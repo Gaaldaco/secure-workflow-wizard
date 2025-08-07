@@ -72,7 +72,7 @@ const HeroSection = () => {
           <div className="max-w-3xl mx-auto animate-fade-in delay-700">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Currently working at an MSP where I build and manage infrastructure, automate workflows, 
-              and secure client environments. Studying <span className="text-primary font-medium">cybersecurity</span> 
+              and secure client environments. Studying <span className="text-primary font-medium">cybersecurity </span> 
               in college and recently completed a bootcamp. I focus on practical solutions that work in 
               <span className="text-primary font-medium">real production environments</span>.
             </p>
