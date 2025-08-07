@@ -10,7 +10,7 @@ const ProjectsShowcase = () => {
 const professionalProjects = [
     {
       title: "Automated User Provisioning",
-      description: "Created scalable PowerShell + ImmyBot workflows for M365 onboarding, including license assignment, AD setup, profile configs, and Intune policies. Streamlined client onboarding process across multiple tenants.",
+      description: "Developed scalable onboarding workflows using PowerShell, ImmyBot, and Rewst for Microsoft 365 tenants. Automated license assignment, Active Directory setup, user profile configuration, and Intune policy deployment. Streamlined and standardized the client onboarding process across multiple tenants.",
       tags: ["PowerShell", "ImmyBot", "M365", "Intune", "Automation"],
       type: "professional" as const,
       featured: true
@@ -24,7 +24,7 @@ const professionalProjects = [
     },
     {
       title: "Hybrid Cloud Infrastructure Deployment",
-      description: "Built secure, scalable environments across Microsoft 365 and Azure for multiple clients. Led tenant migrations, automated provisioning, and implemented security baselines using ARM templates.",
+      description: "Built secure, scalable environments across Microsoft 365 and Azure for multiple clients. Led tenant migrations, automated provisioning tasks, and implemented security best practices using Intune, Conditional Access policies, and Microsoft Defender.",
       tags: ["M365", "Azure", "PowerShell", "Cloud", "Security"],
       type: "professional" as const
     },
