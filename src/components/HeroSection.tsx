@@ -74,7 +74,7 @@ const HeroSection = () => {
               Currently working at an MSP where I build and manage infrastructure, automate workflows, 
               and secure client environments. Studying <span className="text-primary font-medium">cybersecurity </span> 
               in college and recently completed a bootcamp. I focus on practical solutions that work in 
-              <span className="text-primary font-medium">real production environments</span>.
+              <span className="text-primary font-medium"> real production environments</span>.
             </p>
           </div>
 
@@ -120,7 +120,7 @@ const HeroSection = () => {
                   <span className="text-terminal-accent">$</span>
                   <span className="ml-2">cat specialties.txt</span>
                 </div>
-                <div className="text-terminal-text">PowerShell, n8n, Proxmox, pfSense, M365, Hyper-V</div>
+                <div className="text-terminal-text">PowerShell, n8n, Proxmox, pfSense, M365, ESXI</div>
                 <div className="flex items-center">
                   <span className="text-terminal-accent">$</span>
                   <span className="ml-2 animate-pulse">_</span>
