@@ -5,7 +5,7 @@ import { CheckCircle, ArrowRight, Target, Wrench, Shield } from "lucide-react";
 const CareerTimeline = () => {
   const mspSkills = [
     "Built and managed domain environments (on-prem and hybrid) for multiple clients",
-    "Deployed Windows Servers, Hyper-V, VMware, and Proxmox environments",
+    "Deployed Windows Servers, ESXI, VMware, and Proxmox environments",
     "Automated user onboarding/offboarding with PowerShell, ImmyBot, and Tactical RMM",
     "Created n8n workflows syncing data between ConnectWise, Hudu, and HighLevel",
     "Configured security tools: Defender, BitLocker, patch policies, and vulnerability scanning"
@@ -13,7 +13,7 @@ const CareerTimeline = () => {
 
   const futureGoals = [
     "Cybersecurity roles focusing on threat analysis and incident response",
-    "Security certifications (CompTIA Security+, eventually CISSP)",
+    "Security certifications (CompTIA Security+)",
     "Advanced automation for security monitoring and alerting",
     "Cloud security engineering with Azure and AWS",
     "SOC analyst work with SIEM tools and threat hunting"
