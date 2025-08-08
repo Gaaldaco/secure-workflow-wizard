@@ -5,7 +5,7 @@ import { Terminal, Shield, Cloud, ArrowRight, Download } from "lucide-react";
 
 const HeroSection = () => {
   const [typedText, setTypedText] = useState("");
-  const fullText = "Building Secure IT Infrastructure & Automation";
+  const fullText = "I'm Better than Kevin";
 
   useEffect(() => {
     let index = 0;
